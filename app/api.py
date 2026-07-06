@@ -3,9 +3,16 @@ from fastapi import FastAPI, HTTPException
 from app.models import ChatRequest, ChatResponse
 from app.llm import ask_gemini
 from app.logger import logger
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # We'll tighten this later after deployment
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
