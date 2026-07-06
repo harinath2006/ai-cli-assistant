@@ -11,11 +11,12 @@ class FakeModels:
 
 
 class FakeClient:
-    models = FakeModels()
+    def __init__(self, api_key):
+        self.models = FakeModels()
 
 
 def test_ask_gemini(mocker):
-    mocker.patch("app.llm.client", FakeClient())
+    mocker.patch("app.llm.genai.Client", return_value=FakeClient("fake-key"))
 
     result = ask_gemini("Hi")
 
