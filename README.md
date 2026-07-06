@@ -14,7 +14,7 @@ This project started as a Command Line Interface (CLI) application and was later
 Example:
 
 ```
-https://your-project.vercel.app
+https://ai-cli-assistant.vercel.app/
 ```
 
 ### Backend API
@@ -24,16 +24,9 @@ https://your-project.vercel.app
 Example:
 
 ```
-https://your-backend.onrender.com
+https://ai-cli-assistant.onrender.com
 ```
 
-### Swagger Documentation
-
-```
-https://your-backend.onrender.com/docs
-```
-
----
 
 # 📌 Features
 
