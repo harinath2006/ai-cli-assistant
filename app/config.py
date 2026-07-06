@@ -1,0 +1,7 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+APP_NAME = os.getenv("APP_NAME")
+GEMINI_API_KEY =  os.getenv("GEMINI_API_KEY")
