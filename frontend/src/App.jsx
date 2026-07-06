@@ -13,12 +13,12 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "http://127.0.0.1:8000/chat",
-        {
-          message: message,
-        }
-      );
+        const res = await axios.post(
+    `${import.meta.env.VITE_API_URL}/chat`,
+    {
+      message: message,
+    }
+  );
 
       setResponse(res.data.response);
     } catch (error) {
